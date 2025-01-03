@@ -1,0 +1,1 @@
+export const IMG_LINK = "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/feature/myspace/my_space_login_in.png";

@@ -17,4 +17,15 @@ body{
   border: 2px solid rgb(200, 200, 200);
   text-align: center;
 }
+.num-inp{
+  padding: 16px;
+}
+.input-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  padding: 16px;
+}
 .otp-cmp{}
