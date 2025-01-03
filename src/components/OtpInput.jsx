@@ -5,7 +5,7 @@ const OtpInput = ({length = 4 , OtpSubmit=()=>{}}) => {
     const [otp , setOtp] = useState(new Array(length).fill(""));
 
     const inputRefs = useRef([]);
-    console.log(otp);
+ 
 
 
     useEffect(()=>{
@@ -24,6 +24,8 @@ const OtpInput = ({length = 4 , OtpSubmit=()=>{}}) => {
         setOtp(newOtp);
 
         const combinedOtp = newOtp.join("");
+        if(combinedOtp.length === length) OtpSubmit(combinedOtp);
+
     }
     const handleClick = ()=>{}
     const handleKeyDown = ()=>{}
