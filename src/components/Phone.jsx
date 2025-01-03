@@ -33,19 +33,27 @@ const Phone = () => {
       {!showOtpInput ? (
         <form action="" onSubmit={handleSubmit}>
           <div className="input-cont">
-              <input className="num-inp"
-                type="text"
-                onChange={handlePhoneNumber}
-                placeholder="Enter phone number"
-              ></input>
-              <button className="btn" value={phone} onClick={handleSubmit}>
-                Submit
-              </button>
+                <div className="box-inp">
+                    <div className="box"><p>+91</p></div>
+                                  <input className="num-inp"
+                    type="text"
+                    onChange={handlePhoneNumber}
+                    placeholder="Enter phone number"
+                                  ></input>
+                </div>
+              <p className="text">By proceeding you confirm that you are <br></br>above 18 years of age and agree to the <br /> Privacy Policy & Terms of Use.</p>
+              {  <button className="btn" style={{
+              opacity: phone.length === 10 ? 1 : 0,
+              visibility: phone.length === 10 ? "visible" : "hidden",
+              transition: "opacity 0.3s ease, visibility 0.5s ease",
+            }} value={phone} onClick={handleSubmit}>
+                Get OTP
+              </button>}
           </div>
         </form>
       ) : (
         <div>
-          <p>Enter OTP sent to : {phone}</p>
+          <p >Enter OTP sent to : {phone}</p>
           <OtpInput length={4} OtpSubmit={onOtpSubmit}></OtpInput>
         </div>
       )}

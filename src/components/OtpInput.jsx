@@ -30,7 +30,7 @@ const OtpInput = ({length = 4 , OtpSubmit=()=>{}}) => {
 
 
     if(value && index<length-1 && inputRefs.current[index+1]){
-        inputRefs.current[otp.indexOf("")].focus();
+        inputRefs.current[index + 1].focus();
     }
 
     }
